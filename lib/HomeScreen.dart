@@ -31,7 +31,6 @@ class HomeScreen extends StatelessWidget {
               accountEmail: Text('eslamasovsardor@gmail.com'),
               currentAccountPicture: GestureDetector(
                 onTap: () {
-                  // Navigate to profile screen
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => ProfileScreen()),
@@ -75,113 +74,107 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          // Progress Image and Label
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ProgressScreen()),
-              );
-            },
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/progress_image.jpg',
-                  height: 150,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'My Progress',
-                    style: TextStyle(fontSize: 18.0),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/background_image.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Progress InkWell
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProgressScreen()),
+                );
+              },
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: Container(
+                  color: Colors.grey,
+                  child: Center(
+                    child: Text(
+                      'My Progress',
+                      style: TextStyle(fontSize: 18.0),
+                    ),
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
-          // Nutrition Plan Image and Label
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => NutritionPlanScreen()),
-              );
-            },
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/nutrition_image.jpg',
-                  height: 150,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Nutrition Plan',
-                    style: TextStyle(fontSize: 18.0),
+
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => NutritionPlanScreen()),
+                );
+              },
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: Container(
+                  color: Colors.grey,
+                  child: Center(
+                    child: Text(
+                      'Nutrition Plan',
+                      style: TextStyle(fontSize: 18.0),
+                    ),
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
-          // Workout Library Image and Label
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => WorkoutLibrary()),
-              );
-            },
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/workout_image.jpg',
-                  height: 150,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Workout Library',
-                    style: TextStyle(fontSize: 18.0),
+
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WorkoutLibrary()),
+                );
+              },
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: Container(
+                  color: Colors.grey,
+                  child: Center(
+                    child: Text(
+                      'Workout Library',
+                      style: TextStyle(fontSize: 18.0),
+                    ),
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CommunityScreen()),
-              );
-            },
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Community_image.jpg',
-                  height: 150,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Community',
-                    style: TextStyle(fontSize: 18.0),
+
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CommunityScreen()),
+                );
+              },
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: Container(
+                  color: Colors.grey,
+                  child: Center(
+                    child: Text(
+                      'Community',
+                      style: TextStyle(fontSize: 18.0),
+                    ),
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
