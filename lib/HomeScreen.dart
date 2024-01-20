@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/profile_pic.jpg'),
+                  backgroundImage: AssetImage('images/Profile.jpg'),
                 ),
               ),
             ),
@@ -77,7 +77,7 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/background_image.jpg'),
+            image: AssetImage('images/GymImg.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -93,10 +93,7 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: SizedBox(
-                height: 150,
-                width: 150,
                 child: Container(
-                  color: Colors.grey,
                   child: Center(
                     child: Text(
                       'My Progress',
@@ -116,10 +113,7 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: SizedBox(
-                height: 150,
-                width: 150,
                 child: Container(
-                  color: Colors.grey,
                   child: Center(
                     child: Text(
                       'Nutrition Plan',
@@ -138,10 +132,7 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: SizedBox(
-                height: 150,
-                width: 150,
                 child: Container(
-                  color: Colors.grey,
                   child: Center(
                     child: Text(
                       'Workout Library',
@@ -160,10 +151,7 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: SizedBox(
-                height: 150,
-                width: 150,
                 child: Container(
-                  color: Colors.grey,
                   child: Center(
                     child: Text(
                       'Community',

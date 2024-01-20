@@ -23,7 +23,7 @@ class _ProfilePageState extends State<ProfilePage> {
             children: [
               CircleAvatar(
                 radius: 50.0,
-                backgroundImage: AssetImage('assets/profile_picture.jpg'),
+                backgroundImage: AssetImage('images/Profile.jpg'),
               ),
               SizedBox(height: 16.0),
               Text(
@@ -35,7 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               SizedBox(height: 8.0),
               Text(
-                'Member since: April 2023',
+                'Member since: October 15, 2023',
                 style: TextStyle(
                   fontSize: 16.0,
                   color: Colors.grey,
@@ -44,11 +44,11 @@ class _ProfilePageState extends State<ProfilePage> {
               SizedBox(height: 16.0),
               ListTile(
                 leading: Icon(Icons.email),
-                title: Text('sardor2003@example.com'),
+                title: Text('eslamasovsardor@example.com'),
               ),
               ListTile(
                 leading: Icon(Icons.phone),
-                title: Text('+1 (123) 456-7890'),
+                title: Text('(+998)50 *** ** **'),
               ),
               ListTile(
                 leading: Icon(Icons.fitness_center),
@@ -68,7 +68,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               SizedBox(height: 8.0),
               Text('Weight: 75 kg'),
-              Text('Height: 180 cm'),
+              Text('Height: 175 cm'),
               Text('BMI: 23.1'),
               SizedBox(height: 16.0),
               Text(
