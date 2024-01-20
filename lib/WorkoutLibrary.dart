@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-import 'package:untitled/payment.dart';
+import 'package:untitled/SubscriptionScreen.dart';
 
 class WorkoutLibrary extends StatefulWidget {
   @override
@@ -9,39 +8,53 @@ class WorkoutLibrary extends StatefulWidget {
 
 class _WorkoutLibraryState extends State<WorkoutLibrary> {
   final List<CourseAdvertisement> advertisements = [
-     CourseAdvertisement(
+    CourseAdvertisement(
       // image: 'images/powerlifting.png',
       title: 'Fitness 101',
-      description: 'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      description:
+          'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     ),
     CourseAdvertisement(
       // image: 'images/powerlifting.png',
       title: 'Advanced Yoga',
-      description: 'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    ),  CourseAdvertisement(
+      description:
+          'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    ),
+    CourseAdvertisement(
       // image: 'images/powerlifting.png',
       title: 'Advanced Yoga',
-      description: 'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    ),  CourseAdvertisement(
+      description:
+          'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    ),
+    CourseAdvertisement(
       // image: 'images/powerlifting.png',
       title: 'Advanced Yoga',
-      description: 'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    ),  CourseAdvertisement(
+      description:
+          'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    ),
+    CourseAdvertisement(
       // image: 'images/powerlifting.png',
       title: 'Advanced Yoga',
-      description: 'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    ),  CourseAdvertisement(
+      description:
+          'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    ),
+    CourseAdvertisement(
       // image: 'images/powerlifting.png',
       title: 'Advanced Yoga',
-      description: 'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    ),  CourseAdvertisement(
+      description:
+          'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    ),
+    CourseAdvertisement(
       // image: 'images/powerlifting.png',
       title: 'Advanced Yoga',
-      description: 'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    ),  CourseAdvertisement(
+      description:
+          'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    ),
+    CourseAdvertisement(
       // image: 'images/powerlifting.png',
       title: 'Advanced Yoga',
-      description: 'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      description:
+          'What is the lorem Te Ipsum text?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     ),
   ];
 
@@ -72,7 +85,6 @@ class _WorkoutLibraryState extends State<WorkoutLibrary> {
 
   Widget buildCourseAdvertisement(CourseAdvertisement advertisement) {
     return Card(
-
       margin: EdgeInsets.only(
         left: 500.0,
         top: 10.0,
@@ -81,7 +93,8 @@ class _WorkoutLibraryState extends State<WorkoutLibrary> {
       ),
       color: Colors.black54, // Set card color to transparent
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center, // Center the content vertically
+        mainAxisAlignment:
+            MainAxisAlignment.center, // Center the content vertically
 
         children: [
           // Image.asset(
@@ -110,13 +123,14 @@ class _WorkoutLibraryState extends State<WorkoutLibrary> {
                 ),
                 SizedBox(height: 16.0),
                 ElevatedButton(
-
                   onPressed: () {
                     // Navigate to the PaymentScreen on button press
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PaymentScreen()),
-                    );                  },
+                      MaterialPageRoute(
+                          builder: (context) => SubscriptionScreen()),
+                    );
+                  },
                   child: Text('Enroll Now'),
                 ),
               ],
