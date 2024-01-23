@@ -62,8 +62,14 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/powerlifting.png
-    - images/GymImg.png
+    - images/GymImg.jpg
     - images/Profile.jpg
+    - images/pushup.jpeg
+    - images/Squats.jpg
+    - images/jumping_jacks.jpg
+    - images/Lunges.jpg
+    - images/Plank.jpg
+    - images/Crunches.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

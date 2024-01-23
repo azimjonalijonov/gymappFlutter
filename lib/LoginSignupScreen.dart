@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:untitled/HomeScreen.dart';
 
@@ -87,4 +85,3 @@ class LoginSignupScreen extends StatelessWidget {
     );
   }
 }
-
