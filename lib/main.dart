@@ -1,77 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'HomeScreen.dart';
-// import 'LoginSignupScreen.dart';
-//
-// void main() {
-//   runApp(MyGymApp());
-// }
-//
-// class MyGymApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     bool isLoggedIn = false;
-//     return MaterialApp(
-//       title: 'Gym App',
-//       theme: ThemeData(),
-//       initialRoute: isLoggedIn ? '/home' : '/login',
-//       routes: {
-//         '/login': (context) => LoginSignupScreen(),
-//         '/home': (context) => HomeScreen(),
-//       },
-//     );
-//   }
-// }
-//
-// class LoginScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     // Build your login/signup UI here
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Login/Signup'),
-//       ),
-//       // Your login/signup form or widgets
-//     );
-//   }
-// }
-//
-// class HomeScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Home',
-//       home: HomeScreen(),
-//     );
-//   }
-// }
-
-
-
-
-
-// import 'package:flutter/material.dart';
-// import 'WorkoutLibrary.dart'; // Import the file where your WorkoutLibrary class is defined
-//
-// void main() {
-//   runApp(MyApp());
-// }
-//
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'My Fitness App',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//         visualDensity: VisualDensity.adaptivePlatformDensity,
-//       ),
-//       home: WorkoutLibrary(), // Set the home property to an instance of WorkoutLibrary
-//     );
-//   }
-// }
-
-
-
 import 'package:flutter/material.dart';
 import 'LoginSignupScreen.dart';
 import 'SignUp.dart';
@@ -91,7 +17,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -191,4 +116,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

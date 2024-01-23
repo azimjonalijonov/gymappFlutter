@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatefulWidget {
+class ProfileScreen extends StatefulWidget {
   @override
   _ProfilePageState createState() => _ProfilePageState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _ProfilePageState extends State<ProfileScreen> {
   // Placeholder data for the health checklist
   List<bool> healthChecklist = [true, true, false]; // Replace with actual data
 
