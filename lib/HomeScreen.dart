@@ -3,7 +3,6 @@ import 'NutritionPlanScreen.dart';
 import 'WorkoutLibrary.dart';
 import 'ProgressScreen.dart';
 import 'CommunityScreen.dart';
-import 'SettingsScreen.dart';
 import 'ScheduleScreen.dart';
 import 'ProfileScreen.dart';
 
@@ -40,10 +39,6 @@ class HomeScreen extends StatelessWidget {
             label: 'Calendar',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
           ),
@@ -57,12 +52,6 @@ class HomeScreen extends StatelessWidget {
               );
               break;
             case 2:
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SettingsScreen()),
-              );
-              break;
-            case 3:
               // Add navigation to the profile screen
               Navigator.push(
                 context,
