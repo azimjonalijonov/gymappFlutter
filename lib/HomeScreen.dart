@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'NutritionPlanScreen.dart';
+import 'ProfileScreen.dart';
 import 'WorkoutLibrary.dart';
+import 'ScheduleScreen.dart';
 import 'ProgressScreen.dart';
 import 'CommunityScreen.dart';
 import 'SettingsScreen.dart';
-import 'ScheduleScreen.dart';
-import 'ProfileScreen.dart';
+import 'SubscriptionScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -16,89 +17,194 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.notifications),
-            onPressed: () {},
+            onPressed: () {
+            },
           ),
         ],
       ),
-      body: Wrap(
-        alignment: WrapAlignment.spaceEvenly,
-        children: [
-          _buildCard(context, 'My Progress', ProgressScreen()),
-          _buildCard(context, 'Nutrition Plan', NutritionPlanScreen()),
-          _buildCard(context, 'Workout Library', WorkoutLibrary()),
-          _buildCard(context, 'Community', CommunityScreen()),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            label: 'Calendar',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        onTap: (index) {
-          switch (index) {
-            case 1:
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ScheduleScreen()),
-              );
-              break;
-            case 2:
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SettingsScreen()),
-              );
-              break;
-            case 3:
-              // Add navigation to the profile screen
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ProfileScreen()),
-              );
-              break;
-          }
-        },
-      ),
-    );
-  }
-
-  Widget _buildCard(BuildContext context, String title, Widget destination) {
-    return Container(
-      width: MediaQuery.of(context).size.width / 2,
-      margin: EdgeInsets.all(8.0),
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => destination),
-          );
-        },
-        child: Card(
-          color: Colors.blueAccent,
-          elevation: 5.0,
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Center(
-              child: Text(
-                title,
-                style: TextStyle(fontSize: 18.0, color: Colors.white),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text('Sardor Eslamasov'),
+              accountEmail: Text('eslamasovsardor@gmail.com'),
+              currentAccountPicture: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProfileScreen()),
+                  );
+                },
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('images/img.png'),
+                ),
               ),
             ),
+            ListTile(
+              leading: Icon(Icons.group),
+              title: Text('Calendar'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ScheduleScreen()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingsScreen()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.subscriptions),
+              title: Text('Subscription'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PaymentScreen()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/img.png'),
+            fit: BoxFit.cover,
           ),
         ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Progress InkWell
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProgressScreen()),
+                );
+              },
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    left: 500.0,
+                    top: 10.0,
+                    right: 500.0,
+                    bottom: 10.0,
+                  ),
+                  color: Colors.black54,
+                  child: Center(
+                    child: Text(
+                      'My Progress',
+                      style: TextStyle(fontSize: 18.0,color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => NutritionPlanScreen()),
+                );
+              },
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    left: 500.0,
+                    top: 10.0,
+                    right: 500.0,
+                    bottom: 10.0,
+                  ),
+                  color: Colors.black54,
+                  child: Center(
+                    child: Text(
+                      'Nutrition Plan',
+                      style: TextStyle(fontSize: 18.0,color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WorkoutLibrary()),
+                );
+              },
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: Container(
+                  color: Colors.black54,
+                  margin: EdgeInsets.only(
+                    left: 500.0,
+                    top: 10.0,
+                    right: 500.0,
+                    bottom: 10.0,
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Workout Library',
+                      style: TextStyle(fontSize: 18.0,color:Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CommunityScreen()),
+                );
+              },
+              child: SizedBox(
+                height: 150,
+                width: 150,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    left: 500.0,
+                    top: 10.0,
+                    right: 500.0,
+                    bottom: 10.0,
+                  ),
+                  color: Colors.black54,
+                  child: Center(
+                    child: Text(
+                      'Community',
+
+                      style: TextStyle(fontSize: 18.0,color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your FAB action
+        },
+        child: Icon(Icons.add),
       ),
     );
   }
